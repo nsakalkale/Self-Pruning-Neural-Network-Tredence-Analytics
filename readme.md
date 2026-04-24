@@ -19,7 +19,7 @@ Instead of training a dense model and pruning it afterward, each weight is assoc
 
 This results in a model that automatically balances accuracy and sparsity.
 
-For all results which are actually tested and implemented on Kaggle, kindly refer to this link : 
+For all results which are actually tested and implemented on Kaggle, kindly refer to this link : https://www.kaggle.com/code/nimishs27/22mic0112-tredence-analytics-self-pruning-nn
 
 ---
 
