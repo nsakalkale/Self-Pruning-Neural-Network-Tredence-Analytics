@@ -138,7 +138,7 @@ This demonstrates the trade-off between model compactness and performance.
 ├── train.py        # Training pipeline
 ├── evaluate.py     # Visualization and analysis
 ├── data.py         # Dataset loaders
-├── runs/           # Outputs (plots, checkpoints)
+├── runs/           # Outputs (plots)
 ```
 
 ---
