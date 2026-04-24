@@ -16,11 +16,11 @@ class PrunableLinear(nn.Module):
     Linear layer with per-weight learnable gates.
 
     Forward pass:
-        gates    = sigmoid(gate_scores)          ← always in (0, 1)
-        out      = (weight * gates) @ x.T + bias
+        gates = sigmoid(gate_scores)          <- always in (0, 1)
+        out = (weight * gates) @ x.T + bias
 
     The L1 penalty on gates during training pushes the sigmoid toward 0,
-    which is exactly where sigmoid saturates — so once a gate goes near-zero
+    which is exactly where sigmoid saturates, so once a gate goes near-zero
     it gets almost no gradient and stays dead. Intentional and elegant.
     """
 
@@ -72,7 +72,7 @@ class PrunableLinear(nn.Module):
 
 class SelfPruningNet(nn.Module):
     """
-    Small feed-forward net for CIFAR-10 (32×32×3 → 10 classes).
+    Small feed-forward net for CIFAR-10 (32×32×3 -> 10 classes).
 
     Architecture: flatten -> BN -> [512 → 256 → 128] with prunable linears -> head
     Batch norm before the prunable stack helps gate training stabilise quickly.
