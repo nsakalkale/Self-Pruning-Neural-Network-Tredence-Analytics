@@ -74,7 +74,7 @@ A residual projection connects early and deeper layers, improving stability and 
 | Optimizer       | AdamW            |
 | Learning Rate   | 1e-3             |
 | Scheduler       | Cosine Annealing |
-| Batch Size      | 512              |
+| Batch Size      | 256              |
 | Epochs          | 40               |
 | Regularization  | L1 on gates      |
 | Mixed Precision | Enabled          |
