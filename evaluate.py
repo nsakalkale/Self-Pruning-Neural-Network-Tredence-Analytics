@@ -29,7 +29,9 @@ def load(path: Path = RUNS_DIR / "results.json"):
         return json.load(f)
 
 
+# ---------------------------------------------------------------------------
 # Plot 1: gate value distributions
+# ---------------------------------------------------------------------------
 
 def plot_gate_distributions(results: list, out: Path):
     n = len(results)
@@ -54,12 +56,17 @@ def plot_gate_distributions(results: list, out: Path):
     fig.suptitle("Gate Value Distributions — Self-Pruning Network", fontsize=13, fontweight="bold", y=1.02)
     fig.tight_layout()
     fig.savefig(out, dpi=150, bbox_inches="tight")
-    plt.show()
+
+    from IPython.display import display
+    display(fig)
+    
     plt.close(fig)
     print(f"  ✓  {out}")
 
 
+# ---------------------------------------------------------------------------
 # Plot 2: training curves
+# ---------------------------------------------------------------------------
 
 def plot_training_curves(results: list, out: Path):
     fig = plt.figure(figsize=(14, 5))
@@ -91,12 +98,17 @@ def plot_training_curves(results: list, out: Path):
 
     fig.suptitle("Training Dynamics — Self-Pruning Network", fontsize=13, fontweight="bold")
     fig.savefig(out, dpi=150, bbox_inches="tight")
-    plt.show()
+
+    from IPython.display import display
+    display(fig)
+    
     plt.close(fig)
     print(f"  ✓  {out}")
 
 
+# ---------------------------------------------------------------------------
 # Plot 3: accuracy–sparsity tradeoff
+# ---------------------------------------------------------------------------
 
 def plot_tradeoff(results: list, out: Path):
     fig, ax = plt.subplots(figsize=(6, 5))
@@ -120,7 +132,10 @@ def plot_tradeoff(results: list, out: Path):
 
     fig.tight_layout()
     fig.savefig(out, dpi=150, bbox_inches="tight")
-    plt.show()
+    
+    from IPython.display import display
+    display(fig)
+    
     plt.close(fig)
     print(f"  ✓  {out}")
 
