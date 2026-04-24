@@ -87,9 +87,9 @@ Training is handled in `train.py`  and uses CIFAR-10 loaders from `data.py` .
 
 | Lambda | Accuracy | Sparsity |
 | ------ | -------- | -------- |
-| 5e-5   | ~59%     | ~48%     |
-| 2e-4   | ~58%     | ~70%     |
-| 1e-3   | ~55%     | ~90%     |
+| 5e-5   | ~59%     | ~49%     |
+| 2e-4   | ~59%     | ~81%     |
+| 1e-3   | ~59%     | ~98%     |
 
 The model maintains strong performance even at high sparsity levels.
 
